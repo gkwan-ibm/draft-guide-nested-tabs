@@ -33,25 +33,33 @@ include::{common-includes}/os-tabs.adoc[]
 [.tab_content.windows_section.mac_section]
 --
 Run the integration tests against a cluster running with a host name of `localhost`:
+
 [.tab_link.maven_link]
 `*Maven*`
 [.tab_link.gradle_link]
 `*Gradle*`
+
 [.tab_content.maven_section]
 --
 [role='command']
 ```
 mvn failsafe:integration-test
 ```
+# following -- is end of .tab_content.maven_section
 --
-[.tab_content.maven_section]
+
+[.tab_content.gradle_section]
 --
 [role='command']
 ```
 gradle test
 ```
+# following -- is end of .tab_content.gradle_section
 --
+
+# following -- is end of .tab_content.windows_section.mac_section
 --
+
 [.tab_content.linux_section]
 --
 Run the integration tests with the IP address for Minikube:

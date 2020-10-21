@@ -45,7 +45,8 @@ mvn failsafe:integration-test
 // > begin .tab_content.linux_section
 [.tab_content.linux_section]
 --
-Run the integration tests with the IP address for Minikube:
+Run the integration tests with the IP address for Minikube
+(Want the below command can be switched to maven or gradle):
 [role='command']
 ```
 mvn failsafe:integration-test -Dcluster.ip=$(minikube ip)

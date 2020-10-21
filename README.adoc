@@ -24,9 +24,44 @@ Explore how to nested tabs work
 include::{common-includes}/gitclone.adoc[]
 include::{common-includes}/maven-gradle.adoc[]
 
+== OS tabs only
+
+Navigate to the `start` directory.
+
+include::{common-includes}/os-tabs.adoc[]
+
+// > begin .tab_content.windows_section.mac_section
+[.tab_content.windows_section.mac_section]
+--
+Run the integration tests against a cluster running with a host name of `localhost`
+(Want the below command can be switched to maven or gradle): 
+[role='command']
+```
+mvn failsafe:integration-test
+```
+--
+// << end .tab_content.gradle_section
+
+--
+// < end .tab_content.windows_section.mac_section
+
+// > begin .tab_content.linux_section
+[.tab_content.linux_section]
+--
+Run the integration tests with the IP address for Minikube:
+[role='command']
+```
+mvn failsafe:integration-test -Dcluster.ip=$(minikube ip)
+```
+--
+// < begin .tab_content.linux_section
+
+If the tests pass, you'll see an output similar to the following for each service respectively:
+
+
 == Nested tabs
 
-Navigate back to the `start` directory.
+Navigate to the `start` directory.
 
 include::{common-includes}/os-tabs.adoc[]
 

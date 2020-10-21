@@ -30,6 +30,7 @@ Navigate back to the `start` directory.
 
 include::{common-includes}/os-tabs.adoc[]
 
+// > begin .tab_content.windows_section.mac_section
 [.tab_content.windows_section.mac_section]
 --
 Run the integration tests against a cluster running with a host name of `localhost`:
@@ -39,27 +40,30 @@ Run the integration tests against a cluster running with a host name of `localho
 [.tab_link.gradle_link]
 `*Gradle*`
 
+// >> begin .tab_content.maven_section
 [.tab_content.maven_section]
 --
 [role='command']
 ```
 mvn failsafe:integration-test
 ```
-# following -- is end of .tab_content.maven_section
 --
+// << end .tab_content.maven_section
 
+// >> begin .tab_content.gradle_section
 [.tab_content.gradle_section]
 --
 [role='command']
 ```
 gradle test
 ```
-# following -- is end of .tab_content.gradle_section
 --
+// << end .tab_content.gradle_section
 
-# following -- is end of .tab_content.windows_section.mac_section
 --
+// < end .tab_content.windows_section.mac_section
 
+// > begin .tab_content.linux_section
 [.tab_content.linux_section]
 --
 Run the integration tests with the IP address for Minikube:
@@ -68,5 +72,6 @@ Run the integration tests with the IP address for Minikube:
 mvn failsafe:integration-test -Dcluster.ip=$(minikube ip)
 ```
 --
+// < begin .tab_content.linux_section
 
 If the tests pass, you'll see an output similar to the following for each service respectively:

@@ -40,9 +40,6 @@ Run the integration tests against a cluster running with a host name of `localho
 mvn failsafe:integration-test
 ```
 --
-// << end .tab_content.gradle_section
-
---
 // < end .tab_content.windows_section.mac_section
 
 // > begin .tab_content.linux_section
@@ -54,7 +51,7 @@ Run the integration tests with the IP address for Minikube:
 mvn failsafe:integration-test -Dcluster.ip=$(minikube ip)
 ```
 --
-// < begin .tab_content.linux_section
+// < end .tab_content.linux_section
 
 If the tests pass, you'll see an output similar to the following for each service respectively:
 
@@ -107,6 +104,6 @@ Run the integration tests with the IP address for Minikube:
 mvn failsafe:integration-test -Dcluster.ip=$(minikube ip)
 ```
 --
-// < begin .tab_content.linux_section
+// < end .tab_content.linux_section
 
 If the tests pass, you'll see an output similar to the following for each service respectively:

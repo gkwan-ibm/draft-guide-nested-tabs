@@ -1,0 +1,53 @@
+:projectid: nested-tabs
+:page-layout: guide-multipane
+:page-duration: 1 minute
+:page-releasedate: 2020-12-31
+:page-description: Explore how to nested tabs work
+:page-tags: []
+:page-permalink: /guides/{projectid}
+:page-related-guides: ['kubernetes-intro']
+:common-includes: https://raw.githubusercontent.com/OpenLiberty/guides-common/gkwan-maven-gradle
+:source-highlighter: prettify
+:page-seo-title: Explore how to nested tabs work
+:page-seo-description: Explore how to nested tabs work
+:guide-author: Open Liberty
+= Explore how to nested tabs work
+[.hidden]
+NOTE: This repository contains the guide documentation source. To view the guide in published form, view it on the https://openliberty.io/guides/{projectid}.html[Open Liberty website].
+
+Explore how to nested tabs work
+
+:win: WINDOWS
+:mac: MAC
+:linux: LINUX
+
+== What you'll learn
+[role='command']
+include::{common-includes}/gitclone.adoc[]
+
+include::{common-includes}/maven-gradle.adoc[]
+
+== Nested tabs
+
+Navigate back to the `start` directory.
+
+include::{common-includes}/os-tabs.adoc[]
+
+[.tab_content.windows_section.mac_section]
+--
+Run the integration tests against a cluster running with a host name of `localhost`:
+[role='command']
+```
+mvn failsafe:integration-test
+```
+--
+[.tab_content.linux_section]
+--
+Run the integration tests with the IP address for Minikube:
+[role='command']
+```
+mvn failsafe:integration-test -Dcluster.ip=$(minikube ip)
+```
+--
+
+If the tests pass, you'll see an output similar to the following for each service respectively:

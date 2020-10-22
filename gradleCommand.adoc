@@ -1,0 +1,7 @@
+[.tab_content.gradle_section]
+--
+[role='command']
+```
+gradle test
+```
+--

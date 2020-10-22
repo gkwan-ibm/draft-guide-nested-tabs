@@ -74,24 +74,26 @@ Run the integration tests against a cluster running with a host name of `localho
 `*Gradle*`
 
 // >> begin .tab_content.maven_section
-[.tab_content.maven_section]
---
-[role='command']
-```
-mvn failsafe:integration-test
-```
---
+//[.tab_content.maven_section]
+//--
+//[role='command']
+//```
+//mvn failsafe:integration-test
+//```
+//--
 // << end .tab_content.maven_section
+include::mavenCommand.adoc[]
 
 // >> begin .tab_content.gradle_section
-[.tab_content.gradle_section]
---
-[role='command']
-```
-gradle test
-```
---
+//[.tab_content.gradle_section]
+//--
+//[role='command']
+//```
+//gradle test
+//```
+//--
 // << end .tab_content.gradle_section
+include::gradleCommand.adoc[]
 
 --
 // < end .tab_content.windows_section.mac_section

@@ -26,7 +26,7 @@ include::{common-includes}/maven-gradle.adoc[]
 
 == OS tabs only
 
-Navigate to the `start` directory.
+Navigate to the `guide-{projectid}/start` directory.
 
 include::{common-includes}/os-tabs.adoc[]
 
@@ -59,7 +59,7 @@ If the tests pass, you'll see an output similar to the following for each servic
 
 == Nested tabs
 
-Navigate to the `start` directory.
+Navigate to the `guide-{projectid}/start` directory.
 
 include::{common-includes}/os-tabs.adoc[]
 

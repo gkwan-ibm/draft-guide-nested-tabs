@@ -1,0 +1,7 @@
+[.tab_content.maven_section]
+--
+[role='command']
+```
+mvn failsafe:integration-test
+```
+--

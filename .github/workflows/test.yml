@@ -22,3 +22,8 @@ jobs:
       - id: Convert-adoc-to-md
         shell: bash
         run: asciidoctor guide-cdi-intro/README.adoc
+      - name: Upload README.html
+        uses: actions/upload-artifact@v2
+        with:
+          name: README.html
+          path: guide-cdi-intro/README.html

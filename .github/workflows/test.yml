@@ -19,6 +19,9 @@ jobs:
         with:
           path: guides/
           repository: openliberty/guide-cdi-intro
+      - id: list-dir
+        shell: bash
+        run: ls -R guides
       - id: Convert-adoc-to-md
         shell: bash
         run: asciidoctor guides/guide-cdi-intro/README.adoc

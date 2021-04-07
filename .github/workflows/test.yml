@@ -8,9 +8,17 @@ jobs:
     steps:
       - name: Get files
         uses: actions/checkout@v2
-      - id: install_asciidoctor
+      - id: install asciidoctor
         shell: bash
         run: sudo apt-get install asciidoctor
-      - id: run_asciidoctor
+      - id: run asciidoctor
         shell: bash
         run: asciidoctor --version
+      - name: Get a guide
+        uses: actions/checkout@v2
+        with:
+          path: guides/
+          repository: openliberty/guide-cdi-intro
+      - id: Convert adoc to md
+        shell: bash
+        run: asciidoctor guides/guide-cdi-intro/README.adoc

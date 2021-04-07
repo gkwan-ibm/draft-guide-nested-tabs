@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
       - id: install_asciidoctor
         shell: bash
-        run: apt-pkg install asciidoctor
+        run: apt-get install asciidoctor
       - id: run_asciidoctor
         shell: bash
         run: asciidoctor --version

@@ -1,0 +1,14 @@
+name: Test 
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get files
+        uses: actions/checkout@v2
+      - id: install_asciidoctor
+        shell: bash
+        run: apt-pkg install asciidoctor
+      - id: run_asciidoctor
+        shell: bash
+        run: asciidoctor --version
